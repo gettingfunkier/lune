@@ -26,6 +26,7 @@ public class ClickManager : MonoBehaviour
             if (hit.collider != null)
             {
                 Debug.Log("Hit: " + hit.collider.name);
+                hit.collider.gameObject.GetComponent<Interactable>()?.OnClick();
             }
         }
     }
